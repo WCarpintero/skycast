@@ -20,7 +20,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Configurar CORS por si deseas consumirla desde un frontend (Vue, Angular, etc.)
+# Configurar CORS 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -121,7 +121,7 @@ def get_weather_playlist(city: str):
     condition = data.get("weather", [{}])[0].get("main", "").lower()
     temp = data.get("main", {}).get("temp", 20)
 
-    # Lógica creativa para emparejar el clima con géneros musicales
+    #  para emparejar el clima con géneros musicales
     if "thunderstorm" in condition:
         mood = "Cyberpunk / Dark Synthwave"
         suggestion = "El cielo ruge. Es la atmósfera perfecta para programar con ritmos pesados de sintetizadores, beats industriales y techno oscuro."
