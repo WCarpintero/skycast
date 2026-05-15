@@ -21,6 +21,19 @@ El proyecto utiliza las siguientes librerías core de Python:
 * **Python-dotenv**: Gestión de variables de entorno para proteger datos sensibles.
 
 ---
+## Endpoints Disponibles
+* GET /api/v1/weather/current/{city}
+  Descripción: Retorna telemetría detallada y limpia (temperatura, humedad, velocidad del viento y estado actual).
+  Ejemplo: http://127.0.0.1:8000/api/v1/weather/current/Bogota
+* GET /api/v1/weather/outfit/{city}
+   Descripción: Analiza el clima y devuelve una recomendación textual e inteligente de vestimenta (capas, tipos de tela, accesorios para lluvia).
+  Ejemplo: http://127.0.0.1:8000/api/v1/weather/outfit/Medellin
+* GET /api/v1/weather/playlist/{city}
+  Descripción: Cruza el estado del cielo (lluvia, nubes, sol) con perfiles musicales ideales para programar o concentrarse (Lo-Fi, Synthwave, Techno).
+  Ejemplo: http://127.0.0.1:8000/api/v1/weather/playlist/Barranquilla
+
+
+---
 
 ## 📁 Estructura del Proyecto
 ```text
